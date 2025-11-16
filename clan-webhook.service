@@ -9,6 +9,7 @@ WorkingDirectory=/data
 
 # Environment variables
 Environment="DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/xxxxxxxx/xxxxxxxxx"
+Environment="TEMPLE_API_URL=https://templeosrs.com/api/groupmembers.php?id=xxxx"
 
 ExecStart=/usr/local/bin/uvicorn app:app --host 0.0.0.0 --port 8000
 Restart=always

@@ -1,8 +1,12 @@
 import requests
 import json
+import os
 
-# TempleOSRS API URL for group ID 1265
-API_URL = "https://templeosrs.com/api/groupmembers.php?id=1265"
+# Read API URL from environment variable
+API_URL = os.environ.get("TEMPLE_API_URL")
+
+if not API_URL:
+    raise RuntimeError("TEMPLE_API_URL is not set in the environment.")
 
 def fetch_members():
     try:
